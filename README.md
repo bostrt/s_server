@@ -25,7 +25,7 @@ Generate certificates (or just use your own):
 
 Start up container
 ```
-# docker run -v /tmp/mycerts:/certs -d --rm -it -p 8080:8080 s_server
+# docker run -v /tmp/mycerts:/certs -d --rm -it -p 8080:8080 bostrt/s_server
 # curl -k https://localhost:8080/
 ```
 
