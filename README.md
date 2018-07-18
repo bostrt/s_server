@@ -39,3 +39,13 @@ curl: (35) Peer using unsupported version of security protocol.
 ```
 
 See man page (`man s_server`) or this webpage for available options: <https://www.openssl.org/docs/man1.0.2/apps/openssl-s_server.html>.
+
+# OpenShift
+
+Using this container image is OpenShift is very easy and you can get going with one command.
+
+```
+# oc new-app bostrt/s_server
+# oc create route passthrough --service=sserver
+# oc get routes
+```

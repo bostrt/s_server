@@ -1,8 +1,8 @@
 #!/bin/bash
 _cert_filename=${CERT_FILENAME:="cert.pem"}
 _key_filename=${KEY_FILENAME:="key.pem"}
-_cert="./${_cert_filename}"
-_key="./${_key_filename}"
+_cert="/tmp/${_cert_filename}"
+_key="/tmp/${_key_filename}"
 
 if [ -d "/certs" ]; then
         # Use mounted certificates volume.
