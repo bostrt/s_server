@@ -4,7 +4,7 @@ CentOS-based container image with `openssl` installed. The default `ENTRYPOINT` 
 command which starts up a simple SSL/TLS server. Self-signed certificates are generated on container start-up and 
 used by `s_server`. You can also specify your own certificates by mounting a volume at `/certs` containing a 
 `cert.pem` and `key.pem` which are automatically picked up by the container. If you want to use different filenames
-for the customer certs, you can override them using the environment variables `CERT_FILENAME` and `KEY_FILENAME`.
+for the custom certs, you can override them using the environment variables `CERT_FILENAME` and `KEY_FILENAME`.
 
 # Usage
 
