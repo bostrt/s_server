@@ -9,7 +9,7 @@ if [ -d "/certs" ]; then
         _cert="/certs/${_cert_filename}"
         _key="/certs/${_key_filename}"
 else
-        openssl req -x509 -newkey rsa:4096 -keyout $_key -out $_cert -days 365 -subj '/CN=localhost' -nodes
+	openssl req -x509 -newkey rsa:4096 -keyout $_key -out $_cert -days 365 -subj '/CN='$(hostname) -nodes
 fi
 
 openssl s_server -cert $_cert -key $_key -accept 8080 -www $@
